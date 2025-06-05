@@ -32,7 +32,7 @@ header {
   height: 12vh;
   background-image: url("img/header-background.png");
   background-size: 100% 100%;
-  padding: 0 1vw;
+  padding: 0 5vw;
   transition: 0.5s ease-in-out;
   z-index: 2;
 }
@@ -96,14 +96,13 @@ nav button:active {
 }
 
 .active {
-  position: fixed;
+  position: absolute;
   top: 10vh;
-  width: 101vw;
+  width: 102vw;
   display: flex;
   flex-direction: column;
   background-color: rgb(232, 201, 144);
-  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out,
-    transform 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -518,7 +517,7 @@ nav button:active {
   background-image: url("img/plants-back.png");
   justify-items: center;
   height: 80vh;
-  padding-top: 8%;
+  padding-top: 15%;
   z-index: -1;
   margin-top: -6vh;
 }
@@ -536,7 +535,7 @@ nav button:active {
   margin-bottom: 3%;
 }
 
-.danceFun > input {
+input {
   width: 400px;
   height: 50px;
   border-radius: 0;
@@ -618,7 +617,7 @@ footer {
   }
   #menu {
     display: block;
-    font-size: 30px;
+    font-size: 40px;
   }
 
   nav {
@@ -630,20 +629,70 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   #menu {
-    font-size: 30px;
+    font-size: 40px;
     display: block;
   }
 
   nav {
     display: none;
   }
+
+  .danceStudio{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .danceStudio *{
+    text-align: center;
+    justify-items: center;
+  }
+
+  .statist>h2{
+    font-size: 48px;
+  }
+
+  input{
+    width: 90vw;
+    margin: 0 auto 5% auto;
+    border-radius: 20px;
+  }
+
+  .danceFun{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+  }
+
+  .danceFun>h2{
+    text-align: center;
+  }
+
+  .danceFun button{
+    width: 40vw;
+    margin: 0 auto 0 auto;
+    border-radius: 20px;
+  }
+
+  .aiden{
+    background-size: cover;
+  }
+
+  .aiden p{
+    font-size: 28px;
+  }
+
+  .aiden h2{
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
   #menu {
-    font-size: 20px;
+    font-size: 40px;
     display: block;
   }
 
@@ -688,6 +737,21 @@ footer {
     font-size: 20px;
   }
 
+  .letsDance{
+    padding-left: 0;
+  }
+
+  .classLvl>h2,
+  .team>h2{
+    text-align: center;
+  }
+
+  .letsDance>span,
+  .trial>span{
+    justify-items: center;
+    text-align: center;
+  }
+
   .letsDance > img,
   .trial > img {
     width: 40vh;
@@ -700,11 +764,24 @@ footer {
     justify-items: center;
   }
 
+  footer>.rightPart{
+    padding-top: 15%;
+    grid-template-columns: none;
+    grid-template-rows: repeat(3,1fr);
+    justify-content: center;
+  }
+
+  .letsDance>span>button,
+  .trial>span>button,
+  .card>button{
+    width: 50vw;
+  }
+
   .trial > img {
     margin-top: 10%;
   }
   .statist {
-    height: auto;
+    height: 175vh;
   }
 
   .statist > h2 {
@@ -714,7 +791,6 @@ footer {
   .stats {
     grid-template-columns: none;
     grid-template-rows: repeat(3, 1fr);
-    height: 130vh;
   }
 
   .stats > span p {
@@ -741,6 +817,7 @@ footer {
     display: flex;
     flex-direction: column;
     padding-left: 5%;
+    height: auto;
   }
 }
 
