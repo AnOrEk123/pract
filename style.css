@@ -611,6 +611,14 @@ footer {
   margin-bottom: 15px;
 }
 
+.letsDance>span{
+  margin-right: 10%;
+}
+
+.trial>span{
+  margin-left: 10%;
+}
+
 @media (max-width: 830px) {
   .danceStudio {
     background-size: cover;
@@ -629,7 +637,18 @@ footer {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 401px) {
+  .team {
+    height: 155vh !important; 
+  }
+  .stats>span h2{
+    font-size: 16vw;
+  }
+
+  .card>h4{
+    margin-top: 5%;
+  }
+
   #menu {
     font-size: 40px;
     display: block;
@@ -690,32 +709,52 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  #menu {
-    font-size: 40px;
-    display: block;
+@media (max-width: 500px) {
+  footer>.rightPart{
+    flex-direction: column;
   }
 
-  nav {
-    display: none;
+  .danceStudio{
+    background-image: none;
+  }
+}
+
+@media (max-width: 500px) and (min-width: 400px){
+  .aiden{
+    background-size: 250% 100%;
+  }
+
+  .danceStudio{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .danceStudio *{
+    text-align: center;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 740px) and (min-width: 500px){
+  .aiden{
+    background-size: 150% 100%;
   }
 }
 
 @media (max-width: 740px) {
   .team {
-    height: auto;
+    height: 195vh;
   }
   .team > .images {
     height: auto;
     flex-direction: column;
+    gap: 50px;
   }
 
   .team > .images > span {
     justify-content: center;
     justify-items: center;
-  }
-  .cards {
-    flex-direction: column;
   }
 
   .cards button {
@@ -766,9 +805,9 @@ footer {
 
   footer>.rightPart{
     padding-top: 15%;
-    grid-template-columns: none;
-    grid-template-rows: repeat(3,1fr);
+    display: flex;
     justify-content: center;
+    gap: 10%;
   }
 
   .letsDance>span>button,
@@ -781,7 +820,7 @@ footer {
     margin-top: 10%;
   }
   .statist {
-    height: 175vh;
+    height: 185vh;
   }
 
   .statist > h2 {
@@ -813,6 +852,14 @@ footer {
     grid-template-rows: repeat(3, 1fr);
   }
 
+  .cards {
+    flex-direction: column;
+  }
+
+  .card>img {
+    width: 100%;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -821,8 +868,19 @@ footer {
   }
 }
 
-@media (min-width: 1950px) {
-  nav > button {
-    font-size: 30px;
+@media (max-width: 1020px) and (min-width: 740px) {
+  .card>img {
+    width: 80%;
+  }
+
+  .stats>span h2{
+    font-size: 8vw;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 820px) and (min-width: 740px) {
+  .aiden{
+    background-size: 150% 100%;
   }
 }
